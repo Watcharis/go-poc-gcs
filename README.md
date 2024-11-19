@@ -3,8 +3,7 @@
 ## Git problem sloving step
 #### fix Authentication By Personal Access Token
 ```bash
-# git when Authentication with password is not support
-use personal Access token instead
+# git when Authentication with password is not support use personal Access token instead
 ref : https://github.com/settings/tokens
 ```
 ![git push folder local to remote folder](./images/fix-authen-personal-token.png)
