@@ -9,7 +9,7 @@ use personal Access token instead
 git when push file local to remote
 - ref : https://stackoverflow.com/questions/53949041/push-files-from-local-folder-to-folder-in-a-github-repository
 
-![alt text](https://github.com/[Watcharis]/[go-poc-gcs]/blob/[develop]/Screenshot 2567-11-19 at 14.34.01.png?raw=true)
+![git push folder local to remote folder](./Screenshot%202567-11-19%20at%2014.34.01.png)
 
 ```
 
