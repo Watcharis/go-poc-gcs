@@ -42,21 +42,21 @@ func main() {
 	googleCloudStorageRepository := gcs.NewGoogleCloudStorageRepository(credentialByte)
 	// fmt.Printf("googleCloudStorageRepository : %+v\n", googleCloudStorageRepository)
 
-	// destination := fmt.Sprintf(PATHFILE_DESTINATION, "profiles_202406222320.sql")
-	// if err := googleCloudStorageRepository.Download(ctx, BUCKET_NAME, "profiles_202406222320.sql", destination); err != nil {
-	// 	fmt.Println("[ERROR] cannot download file from gcs :", err)
-	// 	return
-	// }
+	destination := fmt.Sprintf(PATHFILE_DESTINATION, "profiles_202406222320.sql")
+	if err := googleCloudStorageRepository.Download(ctx, BUCKET_NAME, "profiles_202406222320.sql", destination); err != nil {
+		fmt.Println("[ERROR] cannot download file from gcs :", err)
+		return
+	}
 
-	// if err := googleCloudStorageRepository.Upload(ctx, BUCKET_NAME, "google-create-credential.txt"); err != nil {
-	// 	fmt.Println("[ERROR] cannot upload file to gcs :", err)
-	// 	return
-	// }
+	if err := googleCloudStorageRepository.Upload(ctx, BUCKET_NAME, "google-create-credential.txt"); err != nil {
+		fmt.Println("[ERROR] cannot upload file to gcs :", err)
+		return
+	}
 
-	// if err := googleCloudStorageRepository.ReadFile(ctx, BUCKET_NAME, "profiles_202406222320.sql"); err != nil {
-	// 	fmt.Println("[ERROR] cannot readfile from gcs :", err)
-	// 	return
-	// }
+	if err := googleCloudStorageRepository.ReadFile(ctx, BUCKET_NAME, "profiles_202406222320.sql"); err != nil {
+		fmt.Println("[ERROR] cannot readfile from gcs :", err)
+		return
+	}
 
 	if err := googleCloudStorageRepository.GenerateV4GetObjectSignedURL(ctx, BUCKET_NAME, "profiles_202406222320.sql"); err != nil {
 		fmt.Println("[ERROR] cannot sign url from gcs :", err)
